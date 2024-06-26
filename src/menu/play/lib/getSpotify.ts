@@ -194,9 +194,7 @@ export async function addToQueue(session: BaseSession, song: string) {
 export async function connectSpotify() {
     if (!spotify) {
         spotify = new SpotifyPlaybackSDK();
-        await spotify.init({
-            executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
-        }).catch((e) => {
+        await spotify.init().catch((e) => {
             client.logger.error(e);
         })
     }
