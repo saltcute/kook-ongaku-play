@@ -5,8 +5,7 @@ import * as fs from 'fs';
 import './event';
 
 class AppMenu extends BaseMenu {
-    name = 'echo';
-    prefix = './!';
+    name = 'play';
 }
 
 const menu = new AppMenu();

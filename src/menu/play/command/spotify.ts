@@ -1,19 +1,19 @@
-import { client } from "init/client";
 import { BaseMenu } from "kasumi.js";
 import upath from 'upath';
 import * as fs from 'fs';
-import './event';
 
-class AppMenu extends BaseMenu {
-    name = 'echo';
-    prefix = './!';
+import menu from '..';
+
+class SpotifyMenu extends BaseMenu {
+    name = 'spotify';
 }
 
-const menu = new AppMenu();
-export default menu;
-client.plugin.load(menu);
+const spotifyMenu = new SpotifyMenu();
 
-const basicPath = upath.join(__dirname, 'command');
+export default spotifyMenu;
+menu.addCommand(spotifyMenu);
+
+const basicPath = upath.join(__dirname, 'spotify');
 const commands = fs.readdirSync(basicPath);
 for (const command of commands) {
     try {

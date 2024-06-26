@@ -1,11 +1,14 @@
 import { BaseCommand, BaseSession, CommandFunction } from "kasumi.js";
-import menu from "..";
+import menu from "../spotify";
+import * as spotify from '../../lib/getSpotify';
 
 class AppCommand extends BaseCommand {
-    name = 'kmd';
+    name = 'resume';
     description = '复读传入的消息';
     func: CommandFunction<BaseSession, any> = async (session) => {
-        if (session.args.length) await session.send(session.args.join(' '));
+        if (!session.guildId) return session.reply("guild only");
+
+        return await spotify.resume(session);
     }
 }
 

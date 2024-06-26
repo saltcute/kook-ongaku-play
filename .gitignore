@@ -1,6 +1,3 @@
 node_modules/
-
-package-lock.json
-
 src/config/config.json5
 src/config/data.json

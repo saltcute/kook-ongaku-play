@@ -2,6 +2,8 @@ import { client } from "init/client";
 import * as fs from 'fs';
 import upath from 'upath';
 
+import 'spotify_oauth';
+
 (async () => {
     await client.connect()
     const basicPath = upath.join(__dirname, 'menu');
