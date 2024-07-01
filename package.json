@@ -34,7 +34,7 @@
     "open": "^8.4.0",
     "puppeteer": "^19.11.1",
     "puppeteer-stream": "^3.0.15",
-    "readable-stream-clone": "^0.0.7",
+    "readable-stream-clone": "^1.0.0",
     "ts-node": "^10.9.1",
     "ts-register": "^0.1.0"
   },
